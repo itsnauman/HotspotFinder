@@ -1,0 +1,43 @@
+body {
+	background: repeat #ECF0F1;
+  	font-family: 'Montserrat', arial, sans-serif;
+  	padding-left: 50px;
+  	padding-right: 50px;
+}
+
+input[type=text]{
+	font-family: 'Montserrat', arial, sans-serif;
+}
+
+
+.flashes li {
+	color: red;
+}
+
+.input-address{
+	width: 400px;
+}
+
+.header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.header a {
+	text-decoration: none;
+	color: black;
+}
+
+footer {
+	bottom: 0;
+	position: fixed;
+}
+
+#zip {
+	color: white;
+}
+
+.map {
+	padding-top: 0px;
+}

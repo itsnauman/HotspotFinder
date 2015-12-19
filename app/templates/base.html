@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<title>NYC Free WiFi Hotspot Finder</title>
+		{% if my_map %}
+			{{ my_map.js}}
+		{% endif %}
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:700,400">
+		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+		<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+	</head>
+	<body>
+
+	<div class="header">
+		<a href="{{ url_for("index") }}"> {% block header %} <h1>NYC Free WiFi Hotspot Finder</h1>{% endblock %} </a>
+	</div>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul class="flashes">
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
+
+	<footer>
+		<p>Made with &#x1F622;by Nauman Ahmad & Jeffrey He</p>
+	</footer>
+</body>
+</html>

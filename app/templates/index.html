@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h3>Search by address</h3>
+	<form class="pure-form" action="/nearaddress" method="post">
+		Enter the address: <input class="input-address" type="text" name="address" required="true"><br>
+		<input type="submit" class="pure-button pure-button-primary" value="Search!">
+	</form>
+
+	<h3>Search by ZipCode</h3>
+	<form class="pure-form" action="/nearzipcode" method="post">
+		Enter the zipcode: <input type="number" name="zipcode" required="true" min="10001" max="11697"><br>
+		<input type="submit" class="pure-button pure-button-primary" value="Search!">
+	</form>
+
+	<h3>Search using your location</h3>
+	<button class="pure-button pure-button-primary" onclick="location.href='/nearme'">Search</button>
+{% endblock %}

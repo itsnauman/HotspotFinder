@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block header %}
+	{% if zipcode %}
+    	<h1>WiFi hotspots near Zipcode: {{ zipcode }}</h1>
+    {% endif %}
+
+    {% if address %}
+    	<h1>WiFi hotspots near address</h1>
+	{% endif %}
+
+	{% if nearme %}
+		<h1>WiFi hotspots near your location</h1>
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if address %}
+    	<p>{{ address }}</p>
+	{% endif %}
+
+	<div class="map">
+		{{ my_map.html }}
+	</div>
+{% endblock %}
